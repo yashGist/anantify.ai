@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../../styles/layout/Navigation.css";
 
 const Navigation = ({
-  logo = "Anantify.AI",
+  logo = "Anantify.ai",
   navItems = [],
   ctaButton = {},
 }) => {
