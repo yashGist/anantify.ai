@@ -1,0 +1,295 @@
+/* ========================================
+   BUSINESS TRANSFORM SECTION STYLES
+   ======================================== */
+
+.business-transform {
+  background: #ffffff;
+  padding: 4rem 2rem;
+  min-height: 100vh;
+}
+
+.business-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Main Grid Layout */
+.business-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr;
+  gap: 3rem;
+  margin-bottom: 4rem;
+  align-items: start;
+}
+
+/* ========================================
+   LEFT SIDE: ROCKET ANIMATION
+   ======================================== */
+
+.left-side {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.rocket-container {
+  position: relative;
+  width: 200px;
+  height: 400px;
+}
+
+/* Top Rocket Box */
+.rocket-box {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 180px;
+  height: 180px;
+  background: linear-gradient(135deg, #e8dfff 0%, #f0e8ff 100%);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 10px 30px rgba(124, 92, 255, 0.15);
+  animation: rocketBounce 2s ease-in-out infinite;
+}
+
+.rocket-icon {
+  font-size: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Bottom Team Box */
+.team-box {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 200px;
+  height: 130px;
+  background: linear-gradient(135deg, #e8dfff 0%, #f0e8ff 100%);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 10px 30px rgba(124, 92, 255, 0.15);
+  padding: 1rem;
+}
+
+.checkmark-icon {
+  font-size: 2rem;
+  color: #7c5cff;
+}
+
+.team-text {
+  margin: 0;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #333333;
+  line-height: 1.4;
+}
+
+/* Diagonal Line */
+.diagonal-line {
+  position: absolute;
+  top: 180px;
+  left: 50%;
+  width: 180px;
+  height: 150px;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+/* Rocket Bounce Animation */
+@keyframes rocketBounce {
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-20px);
+  }
+}
+
+/* ========================================
+   MIDDLE SIDE: ACCORDION
+   ======================================== */
+
+.middle-side {
+  padding: 0 1rem;
+}
+
+.transform-title {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: #000000;
+  margin: 0 0 2rem 0;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+
+.accordion-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* ========================================
+   RIGHT SIDE: ROTATING WHEEL
+   ======================================== */
+
+.right-side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+
+.rotating-wheel {
+  width: 250px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.1s linear;
+}
+
+.wheel-svg {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 10px 30px rgba(139, 125, 255, 0.2));
+}
+
+/* ========================================
+   STATS SECTION
+   ======================================== */
+
+.stats-section {
+  background: #f0f0f0;
+  border-radius: 12px;
+  display: flex;
+  padding: 2rem;
+  margin-top: 3rem;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+@media (max-width: 1200px) {
+  .business-grid {
+    grid-template-columns: 1fr 1.2fr;
+    gap: 2rem;
+  }
+
+  .right-side {
+    grid-column: 1 / -1;
+    min-height: 300px;
+  }
+
+  .rotating-wheel {
+    width: 200px;
+    height: 200px;
+  }
+
+  .transform-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .business-transform {
+    padding: 2rem 1rem;
+  }
+
+  .business-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .left-side {
+    order: 2;
+  }
+
+  .middle-side {
+    order: 1;
+    padding: 0;
+  }
+
+  .right-side {
+    order: 3;
+    min-height: 250px;
+  }
+
+  .rotating-wheel {
+    width: 180px;
+    height: 180px;
+  }
+
+  .transform-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .rocket-container {
+    width: 150px;
+    height: 350px;
+  }
+
+  .rocket-box {
+    width: 150px;
+    height: 150px;
+  }
+
+  .rocket-icon {
+    font-size: 3rem;
+  }
+
+  .team-box {
+    width: 150px;
+    height: 110px;
+  }
+
+  .checkmark-icon {
+    font-size: 1.5rem;
+  }
+
+  .team-text {
+    font-size: 0.8rem;
+  }
+
+  .diagonal-line {
+    width: 140px;
+    height: 130px;
+  }
+
+  .stats-section {
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .business-transform {
+    padding: 1.5rem 0.5rem;
+  }
+
+  .transform-title {
+    font-size: 1.5rem;
+  }
+
+  .right-side {
+    display: none;
+  }
+
+  .stats-section {
+    flex-direction: column;
+    padding: 1rem;
+  }
+}

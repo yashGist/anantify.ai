@@ -1,0 +1,62 @@
+/* ========================================
+   STAT CARD STYLES
+   ======================================== */
+
+.stat-card {
+  flex: 1;
+  text-align: left;
+  padding: 2rem;
+  border-right: 1px solid #d0d0d0;
+}
+
+.stat-card:last-child {
+  border-right: none;
+}
+
+.stat-number {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 0.8rem;
+}
+
+.stat-description {
+  font-size: 0.95rem;
+  color: #666666;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .stat-card {
+    border-right: none;
+    border-bottom: 1px solid #d0d0d0;
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  .stat-card:last-child {
+    border-bottom: none;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+  }
+
+  .stat-label {
+    font-size: 1rem;
+  }
+
+  .stat-description {
+    font-size: 0.9rem;
+  }
+}
