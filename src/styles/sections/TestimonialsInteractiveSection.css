@@ -124,6 +124,7 @@
 .tis-logo-card:nth-child(2) {
   grid-column: 2 / 3;
   grid-row: 1 / 2;
+  margin-top: 60px;
 }
 
 .tis-logo-card:nth-child(3) {
@@ -134,6 +135,7 @@
 .tis-logo-card:nth-child(4) {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
+  margin-top: 60px;
 }
 
 .tis-logo-card:nth-child(5) {

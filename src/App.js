@@ -10,6 +10,7 @@ import "./styles/App.css";
 import EngineeringSection from "./components/sections/EngineeringSection";
 import BuildTogetherSection from "./components/sections/BuildTogetherSection";
 import TestimonialsInteractiveSection from "./components/sections/TestimonialsInteractiveSection";
+import HireUsSection from "./components/sections/HireUsSection";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
       <EngineeringSection />
       <BuildTogetherSection />
       <TestimonialsInteractiveSection />
+      <HireUsSection />
     </div>
   );
 }
