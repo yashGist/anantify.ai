@@ -12,6 +12,7 @@ import BuildTogetherSection from "./components/sections/BuildTogetherSection";
 import TestimonialsInteractiveSection from "./components/sections/TestimonialsInteractiveSection";
 import HireUsSection from "./components/sections/HireUsSection";
 import OurProductsSection from "./components/sections/OurProductsSection";
+import CustomLLMSection from "./components/sections/CustomLLMSection";
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
       <TestimonialsInteractiveSection />
       <HireUsSection />
       <OurProductsSection />
+      <CustomLLMSection />
     </div>
   );
 }
