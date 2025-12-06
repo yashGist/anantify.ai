@@ -8,6 +8,7 @@ import ServiceCardsSection from "./components/sections/ServiceCardsSection";
 import AIProducts from "./components/sections/AIProducts";
 import "./styles/App.css";
 import EngineeringSection from "./components/sections/EngineeringSection";
+import BuildTogetherSection from "./components/sections/BuildTogetherSection";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
       />
       <ServiceCardsSection />
       <EngineeringSection />
+      <BuildTogetherSection />
     </div>
   );
 }

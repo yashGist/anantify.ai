@@ -1,0 +1,335 @@
+/* ========================================
+   BUILD TOGETHER SECTION
+   UNIQUE CLASS NAMES - NO CONFLICTS
+   Two-column layout with animated shapes and services list
+   ======================================== */
+
+.build-together {
+  background: #ffffff;
+  padding: 100px 2rem;
+  min-height: auto;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.build-together-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+/* ========================================
+   LEFT COLUMN - BUILD TOGETHER
+   ======================================== */
+
+.build-together-left {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.build-together-title {
+  font-size: 44px;
+  font-weight: 700;
+  color: #000000;
+  margin: 0;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+
+.build-together-paragraph {
+  font-size: 16px;
+  color: #666666;
+  line-height: 1.6;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* ========================================
+   ANIMATED SHAPES GRID - BUILD TOGETHER
+   UNIQUE PREFIX: bts- (Build Together Shapes)
+   ======================================== */
+
+.bts-shapes-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  width: fit-content;
+  margin-top: 20px;
+}
+
+.bts-shape {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 24px;
+}
+
+/* Shape 1: Morphing rounded square (top-left) */
+.bts-shape-square-morph {
+  background: linear-gradient(135deg, #b3c6ff 0%, #a8c0f5 100%);
+  animation: bts-morphSquare 3.5s ease-in-out infinite;
+}
+
+@keyframes bts-morphSquare {
+  0% {
+    border-radius: 24px;
+  }
+  40% {
+    border-radius: 50%;
+  }
+  60% {
+    border-radius: 50%;
+  }
+  100% {
+    border-radius: 24px;
+  }
+}
+
+/* Shape 2: Floating circle (top-right) */
+.bts-shape-circle-bounce {
+  background: linear-gradient(135deg, #5b9eff 0%, #4a8de8 100%);
+  border-radius: 50%;
+  animation: bts-floatCircle 3s ease-in-out infinite;
+}
+
+@keyframes bts-floatCircle {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-12px);
+  }
+  40% {
+    transform: translateY(-12px);
+  }
+  60% {
+    transform: translateY(12px);
+  }
+  75% {
+    transform: translateY(12px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Shape 3: Rotating triangle (bottom-left) */
+.bts-shape-triangle-rotate {
+  background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+  width: 80px;
+  height: 80px;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  animation: bts-rotateTriangle 4s ease-in-out infinite;
+}
+
+@keyframes bts-rotateTriangle {
+  0% {
+    transform: rotate(0deg);
+  }
+  60% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Shape 4: Static square (bottom-right) */
+.bts-shape-square-static {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  border-radius: 20px;
+  animation: bts-subtleBreath 4.5s ease-in-out infinite;
+}
+
+@keyframes bts-subtleBreath {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* ========================================
+   RIGHT COLUMN - SERVICES LIST - BUILD TOGETHER
+   UNIQUE PREFIX: bts-service-
+   ======================================== */
+
+.build-together-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.bts-services-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.bts-service-item {
+  display: flex;
+  gap: 20px;
+  padding: 24px 0;
+  border-bottom: 1px solid #e5e5e5;
+  align-items: flex-start;
+}
+
+.bts-service-item:last-child {
+  border-bottom: none;
+}
+
+.bts-service-icon {
+  font-size: 32px;
+  flex-shrink: 0;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bts-service-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.bts-service-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #000000;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.bts-service-description {
+  font-size: 14px;
+  color: #888888;
+  line-height: 1.6;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+@media (max-width: 1024px) {
+  .build-together-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .build-together-title {
+    font-size: 36px;
+  }
+
+  .build-together-paragraph {
+    font-size: 15px;
+  }
+
+  .bts-shape {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+@media (max-width: 768px) {
+  .build-together {
+    padding: 60px 1.5rem;
+  }
+
+  .build-together-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .build-together-title {
+    font-size: 28px;
+  }
+
+  .build-together-paragraph {
+    font-size: 14px;
+  }
+
+  .bts-shapes-grid {
+    gap: 16px;
+  }
+
+  .bts-shape {
+    width: 60px;
+    height: 60px;
+  }
+
+  .bts-service-item {
+    padding: 20px 0;
+    gap: 16px;
+  }
+
+  .bts-service-icon {
+    font-size: 28px;
+  }
+
+  .bts-service-title {
+    font-size: 16px;
+  }
+
+  .bts-service-description {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .build-together {
+    padding: 40px 1rem;
+  }
+
+  .build-together-container {
+    gap: 20px;
+  }
+
+  .build-together-title {
+    font-size: 24px;
+  }
+
+  .build-together-paragraph {
+    font-size: 13px;
+  }
+
+  .bts-shapes-grid {
+    gap: 12px;
+  }
+
+  .bts-shape {
+    width: 50px;
+    height: 50px;
+  }
+
+  .bts-service-item {
+    padding: 16px 0;
+    gap: 12px;
+  }
+
+  .bts-service-icon {
+    font-size: 24px;
+  }
+
+  .bts-service-title {
+    font-size: 14px;
+  }
+
+  .bts-service-description {
+    font-size: 12px;
+  }
+}
