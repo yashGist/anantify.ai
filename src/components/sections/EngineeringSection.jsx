@@ -5,8 +5,7 @@ import "../../styles/sections/EngineeringSection.css";
  * EngineeringSection Component
  *
  * Displays a grid of 8 service cards + 1 "All Services" card
- * Cards arranged in 2 rows x 4 columns
- * Each card has icon, title, and description
+ * USING UNIQUE CLASS NAMES - eng-service-card (NO CONFLICTS with ServicesSection)
  */
 const EngineeringSection = () => {
   const services = [
@@ -70,20 +69,20 @@ const EngineeringSection = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="services-grid">
+        <div className="engineering-services-grid">
           {services.map((service, index) => (
-            <div key={index} className="service-card">
-              <div className="card-icon">{service.icon}</div>
-              <h3 className="card-title">{service.title}</h3>
-              <p className="card-description">{service.description}</p>
+            <div key={index} className="eng-service-card">
+              <div className="eng-card-icon">{service.icon}</div>
+              <h3 className="eng-card-title">{service.title}</h3>
+              <p className="eng-card-description">{service.description}</p>
             </div>
           ))}
 
           {/* All Services Card */}
-          <div className="service-card all-services-card">
-            <div className="card-icon">↗️</div>
-            <h3 className="card-title">All Services</h3>
-            <a href="#all-services" className="all-services-link">
+          <div className="eng-service-card eng-all-services-card">
+            <div className="eng-card-icon">↗️</div>
+            <h3 className="eng-card-title">All Services</h3>
+            <a href="#all-services" className="eng-all-services-link">
               View All →
             </a>
           </div>

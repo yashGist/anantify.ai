@@ -5,7 +5,7 @@
 .services {
   background: #000000;
   padding: 4rem 2rem;
-  min-height: 100vh;
+  min-height: auto;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
@@ -41,12 +41,14 @@
   font-weight: 300;
 }
 
-/* Services Grid */
+/* Services Grid - ALL 5 IN ONE LINE */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 2rem;
+  gap: 1.5rem;
   margin: 3rem 0 4rem 0;
+  align-items: stretch;
+  width: 100%;
 }
 
 /* Footer Section */
@@ -69,7 +71,117 @@
   margin-right: auto;
 }
 
-/* Responsive */
+/* ========================================
+   SERVICE CARD STYLES - Animated Neon Border
+   ======================================== */
+
+.service-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 3rem 2rem;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Rotating gradient border effect */
+.service-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    transparent,
+    transparent,
+    transparent,
+    #00d4ff,
+    transparent,
+    transparent,
+    transparent
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  animation: rotateBorder 4s linear infinite;
+  z-index: -2;
+}
+
+/* Black background overlay to create border effect */
+.service-card::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  background: #000000;
+  border-radius: 14px;
+  z-index: -1;
+}
+
+/* Show border on hover */
+.service-card:hover::before {
+  opacity: 1;
+}
+
+/* Rotate the gradient to create flowing border effect */
+@keyframes rotateBorder {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Card Hover Effects */
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 212, 255, 0.2);
+  border-color: rgba(0, 212, 255, 0.3);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+/* Service Icon */
+.service-icon {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+}
+
+.service-card:hover .service-icon {
+  transform: scale(1.15) rotateY(10deg);
+}
+
+/* Service Title */
+.service-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  letter-spacing: 0.1em;
+  line-height: 1.5;
+  transition: color 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.service-card:hover .service-title {
+  color: #00d4ff;
+}
+
+/* Responsive Design */
 @media (max-width: 1200px) {
   .services-grid {
     grid-template-columns: repeat(3, 1fr);
@@ -82,6 +194,19 @@
 
   .services-footer-title {
     font-size: 2rem;
+  }
+
+  .service-card {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .service-icon {
+    font-size: 3rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .service-title {
+    font-size: 0.95rem;
   }
 }
 
@@ -107,6 +232,20 @@
   .services-footer-title {
     font-size: 1.6rem;
   }
+
+  .service-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .service-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .service-title {
+    font-size: 0.9rem;
+    letter-spacing: 0.08em;
+  }
 }
 
 @media (max-width: 480px) {
@@ -130,5 +269,17 @@
 
   .services-footer-title {
     font-size: 1.3rem;
+  }
+
+  .service-card {
+    padding: 1.8rem 1.2rem;
+  }
+
+  .service-icon {
+    font-size: 2.2rem;
+  }
+
+  .service-title {
+    font-size: 0.85rem;
   }
 }

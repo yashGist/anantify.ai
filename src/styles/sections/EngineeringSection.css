@@ -1,6 +1,7 @@
 /* ========================================
    ENGINEERING SECTION
    Grid of service cards with icon, title, description
+   USING UNIQUE CLASS NAMES - NO CONFLICTS
    ======================================== */
 
 .engineering-section {
@@ -16,7 +17,7 @@
 }
 
 /* ========================================
-   HEADER SECTION
+   ENGINEERING HEADER SECTION
    ======================================== */
 
 .engineering-header {
@@ -43,20 +44,21 @@
 }
 
 /* ========================================
-   SERVICES GRID
+   ENGINEERING SERVICES GRID
    ======================================== */
 
-.services-grid {
+.engineering-services-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
 }
 
 /* ========================================
-   SERVICE CARD
+   ENGINEERING SERVICE CARD
+   UNIQUE CLASS NAMES - eng-service-card
    ======================================== */
 
-.service-card {
+.eng-service-card {
   background: linear-gradient(135deg, #0f1b3d 0%, #1a2650 100%);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
@@ -72,7 +74,7 @@
   min-height: 240px;
 }
 
-.service-card:hover {
+.eng-service-card:hover {
   background: linear-gradient(135deg, #1a2a4a 0%, #244060 100%);
   border-color: rgba(255, 255, 255, 0.2);
   transform: translateY(-5px);
@@ -80,19 +82,19 @@
 }
 
 /* ========================================
-   CARD CONTENT
+   ENGINEERING CARD CONTENT
    ======================================== */
 
-.card-icon {
+.eng-card-icon {
   font-size: 2.5rem;
   transition: transform 0.3s ease;
 }
 
-.service-card:hover .card-icon {
+.eng-service-card:hover .eng-card-icon {
   transform: scale(1.1);
 }
 
-.card-title {
+.eng-card-title {
   font-size: 1.1rem;
   font-weight: 600;
   color: #ffffff;
@@ -101,11 +103,11 @@
   transition: color 0.3s ease;
 }
 
-.service-card:hover .card-title {
+.eng-service-card:hover .eng-card-title {
   color: #e0e0e0;
 }
 
-.card-description {
+.eng-card-description {
   font-size: 0.85rem;
   color: rgba(255, 255, 255, 0.7);
   margin: 0;
@@ -113,7 +115,7 @@
   transition: color 0.3s ease;
 }
 
-.service-card:hover .card-description {
+.eng-service-card:hover .eng-card-description {
   color: rgba(255, 255, 255, 0.9);
 }
 
@@ -121,16 +123,16 @@
    ALL SERVICES CARD (Special styling)
    ======================================== */
 
-.all-services-card {
+.eng-all-services-card {
   min-height: 240px;
   justify-content: space-around;
 }
 
-.all-services-card .card-title {
+.eng-all-services-card .eng-card-title {
   margin-top: 0.5rem;
 }
 
-.all-services-link {
+.eng-all-services-link {
   font-size: 0.95rem;
   font-weight: 600;
   color: #64b5f6;
@@ -139,17 +141,17 @@
   margin-top: 0.5rem;
 }
 
-.all-services-card:hover .all-services-link {
+.eng-all-services-card:hover .eng-all-services-link {
   color: #90caf9;
   transform: translateX(3px);
 }
 
 /* ========================================
-   RESPONSIVE DESIGN
+   RESPONSIVE
    ======================================== */
 
 @media (max-width: 1200px) {
-  .services-grid {
+  .engineering-services-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 1.2rem;
   }
@@ -158,7 +160,7 @@
     font-size: 2rem;
   }
 
-  .service-card {
+  .eng-service-card {
     min-height: 220px;
   }
 }
@@ -168,7 +170,7 @@
     padding: 2.5rem 1rem;
   }
 
-  .services-grid {
+  .engineering-services-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
   }
@@ -181,20 +183,20 @@
     font-size: 0.9rem;
   }
 
-  .service-card {
+  .eng-service-card {
     min-height: 200px;
     padding: 1.5rem;
   }
 
-  .card-icon {
+  .eng-card-icon {
     font-size: 2rem;
   }
 
-  .card-title {
+  .eng-card-title {
     font-size: 1rem;
   }
 
-  .card-description {
+  .eng-card-description {
     font-size: 0.8rem;
   }
 }
@@ -204,7 +206,7 @@
     padding: 2rem 0.5rem;
   }
 
-  .services-grid {
+  .engineering-services-grid {
     grid-template-columns: 1fr;
     gap: 0.8rem;
   }
@@ -213,20 +215,20 @@
     font-size: 1.5rem;
   }
 
-  .service-card {
+  .eng-service-card {
     min-height: 180px;
     padding: 1.2rem;
   }
 
-  .card-icon {
+  .eng-card-icon {
     font-size: 1.8rem;
   }
 
-  .card-title {
+  .eng-card-title {
     font-size: 0.95rem;
   }
 
-  .card-description {
+  .eng-card-description {
     font-size: 0.75rem;
   }
 }
