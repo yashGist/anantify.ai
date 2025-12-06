@@ -1,0 +1,55 @@
+/* ========================================
+   SERVICE CARDS SECTION
+   Container for 3 service cards with grid layout
+   ======================================== */
+
+.service-cards-section {
+  background: #000000;
+  padding: 4rem 2rem;
+  min-height: auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.service-cards-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+@media (max-width: 1200px) {
+  .service-cards-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .service-cards-section {
+    padding: 3rem 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .service-cards-container {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .service-cards-section {
+    padding: 2rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-cards-section {
+    padding: 1.5rem 0.5rem;
+  }
+
+  .service-cards-container {
+    gap: 1rem;
+  }
+}
