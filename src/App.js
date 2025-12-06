@@ -7,6 +7,7 @@ import BulbCTA from "./components/cta/BulbCTA";
 import ServiceCardsSection from "./components/sections/ServiceCardsSection";
 import AIProducts from "./components/sections/AIProducts";
 import "./styles/App.css";
+import EngineeringSection from "./components/sections/EngineeringSection";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         buttonLink="#contact"
       />
       <ServiceCardsSection />
+      <EngineeringSection />
     </div>
   );
 }

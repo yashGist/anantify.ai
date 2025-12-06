@@ -1,0 +1,232 @@
+/* ========================================
+   ENGINEERING SECTION
+   Grid of service cards with icon, title, description
+   ======================================== */
+
+.engineering-section {
+  background: #ffffff;
+  padding: 4rem 2rem;
+  min-height: auto;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.engineering-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* ========================================
+   HEADER SECTION
+   ======================================== */
+
+.engineering-header {
+  text-align: left;
+  margin-bottom: 3rem;
+}
+
+.engineering-title {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: #000000;
+  margin: 0 0 1.5rem 0;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+
+.engineering-subtitle {
+  font-size: 0.95rem;
+  color: #666666;
+  max-width: 600px;
+  margin: 0;
+  line-height: 1.7;
+  font-weight: 300;
+}
+
+/* ========================================
+   SERVICES GRID
+   ======================================== */
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+/* ========================================
+   SERVICE CARD
+   ======================================== */
+
+.service-card {
+  background: linear-gradient(135deg, #0f1b3d 0%, #1a2650 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  min-height: 240px;
+}
+
+.service-card:hover {
+  background: linear-gradient(135deg, #1a2a4a 0%, #244060 100%);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(15, 27, 61, 0.3);
+}
+
+/* ========================================
+   CARD CONTENT
+   ======================================== */
+
+.card-icon {
+  font-size: 2.5rem;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover .card-icon {
+  transform: scale(1.1);
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: 0.02em;
+  transition: color 0.3s ease;
+}
+
+.service-card:hover .card-title {
+  color: #e0e0e0;
+}
+
+.card-description {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+  line-height: 1.6;
+  transition: color 0.3s ease;
+}
+
+.service-card:hover .card-description {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* ========================================
+   ALL SERVICES CARD (Special styling)
+   ======================================== */
+
+.all-services-card {
+  min-height: 240px;
+  justify-content: space-around;
+}
+
+.all-services-card .card-title {
+  margin-top: 0.5rem;
+}
+
+.all-services-link {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #64b5f6;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-top: 0.5rem;
+}
+
+.all-services-card:hover .all-services-link {
+  color: #90caf9;
+  transform: translateX(3px);
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+@media (max-width: 1200px) {
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+  }
+
+  .engineering-title {
+    font-size: 2rem;
+  }
+
+  .service-card {
+    min-height: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .engineering-section {
+    padding: 2.5rem 1rem;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .engineering-title {
+    font-size: 1.8rem;
+  }
+
+  .engineering-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .service-card {
+    min-height: 200px;
+    padding: 1.5rem;
+  }
+
+  .card-icon {
+    font-size: 2rem;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+
+  .card-description {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .engineering-section {
+    padding: 2rem 0.5rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+
+  .engineering-title {
+    font-size: 1.5rem;
+  }
+
+  .service-card {
+    min-height: 180px;
+    padding: 1.2rem;
+  }
+
+  .card-icon {
+    font-size: 1.8rem;
+  }
+
+  .card-title {
+    font-size: 0.95rem;
+  }
+
+  .card-description {
+    font-size: 0.75rem;
+  }
+}
