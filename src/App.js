@@ -9,6 +9,7 @@ import AIProducts from "./components/sections/AIProducts";
 import "./styles/App.css";
 import EngineeringSection from "./components/sections/EngineeringSection";
 import BuildTogetherSection from "./components/sections/BuildTogetherSection";
+import TestimonialsInteractiveSection from "./components/sections/TestimonialsInteractiveSection";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
       <ServiceCardsSection />
       <EngineeringSection />
       <BuildTogetherSection />
+      <TestimonialsInteractiveSection />
     </div>
   );
 }
